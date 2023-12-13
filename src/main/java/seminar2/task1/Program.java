@@ -24,7 +24,11 @@ public class Program {
 
     private static void animalInformation(Animal[] animals) {
         for (Animal animal : animals) {
-            System.out.println(animal.getClass().getSimpleName() + ":");
+            if (animal.getClass().getSimpleName().equals("Cat")){
+                System.out.println("Кот: ");
+            } else {
+                System.out.println("Собака: ");
+            }
             System.out.println("Кличка: " + animal.name);
             System.out.println("Возраст: " + animal.age);
 
