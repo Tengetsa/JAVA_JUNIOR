@@ -11,7 +11,8 @@ public class Program {
     Выведите на экран информацию о каждом объекте.
     Вызовите метод "makeSound()" у каждого объекта, если такой метод присутствует.
      */
-    public static void main(String[] args) throws NoSuchMethodException {
+
+    public static void main(String[] args) {
         Animal[] animals = new Animal[] {
                 new Cat("Гаражик", 6),
                 new Cat("Соня", 4),
