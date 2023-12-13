@@ -13,27 +13,34 @@ public class Program {
      */
 
     public static void main(String[] args) {
-        Animal[] animals = new Animal[] {
+        Animal[] animals = new Animal[]
+            {
                 new Cat("Гаражик", 6),
                 new Cat("Соня", 4),
                 new Cat("Стеша", 9),
                 new Dog("Чарли", 16),
                 new Dog("Пушистик", 3)
-        };
+            };
+
         animalInformation(animals);
     }
 
     private static void animalInformation(Animal[] animals) {
-        for (Animal animal : animals) {
-            if (animal.getClass().getSimpleName().equals("Cat")){
+        for (Animal animal : animals)
+        {
+            if (animal.getClass().getSimpleName().equals("Cat"))
+            {
                 System.out.println("Кот: ");
-            } else {
+            } else
+            {
                 System.out.println("Собака: ");
             }
+
             System.out.println("Кличка: " + animal.name);
             System.out.println("Возраст: " + animal.age);
 
-            try {
+            try
+            {
                 Method method = animal.getClass().getMethod("makeSound");
                 method.invoke(animal);
             } catch (Exception e) {
