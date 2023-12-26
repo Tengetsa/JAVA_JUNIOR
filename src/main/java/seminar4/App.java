@@ -35,7 +35,7 @@ public class App {
                 .addAnnotatedClass(Course.class)
                 .buildSessionFactory()) {
             while (true){
-                printMenu();
+                menu();
                 try {
 
                     choice = scanner.nextInt();
@@ -57,7 +57,7 @@ public class App {
     }
 
     //region method
-    public static void printMenu() {
+    public static void menu() {
         System.out.println("1 - Вставить");
         System.out.println("2 - Чтение");
         System.out.println("3 - Обновить");
